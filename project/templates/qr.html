@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR CODE</title>
+    <style>
+        .img{
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border: 2px solid black;
+        }
+        body{
+            background-color: black;
+        }
+        h2{
+            position:absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: red;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            font-size: 50px;
+        }
+        h6{
+            color: white;
+            text-align: end;
+            font-family:sans-serif;
+            color: red;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            padding-bottom: 30px;
+            font-size:15px;
+        }
+        a{
+            text-decoration: none;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border-radius: 6px;
+            font-weight: 600;
+            font-weight: bold;
+            color: black;
+            
+        }
+        a:hover{
+            color: white;
+        }
+        button{
+            position: fixed;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border-radius: 6px;
+            padding: 5px 10px;
+        }
+        button:hover{
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>SCAN IT !</h2>
+    <div class="img">
+        <img  src="{{ url_for('static',filename='images/qr.png') }}" alt="My Image">
+    </div>
+    <button>
+        <a href="{{ url_for('download_qr') }}">Download</a>
+    </button>
+    <h6>Created &#169; by Prasad Raju.</h6>
+</body>
+</html>
